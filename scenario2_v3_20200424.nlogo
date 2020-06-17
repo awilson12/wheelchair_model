@@ -36,7 +36,7 @@ to setup
     let zone3-patches patches with [ pxcor > 0 and pycor > 84]
     ask zone3-patches [
       set zone "Domicilliary"
-      set AW 0.25 * 535 ; place holder: maximum fraction of hand times maximum hand SA
+      set AW 0.25 * 535
       set contamMRSA3 0
       set contamCdiff3 0
       set pcolor white]
@@ -45,7 +45,7 @@ to setup
     let zone4-patches patches with [ pxcor > 0 and pycor < 84 and pycor > 0 ]
     ask zone4-patches [
       set zone "Long Term Care"
-      set AW 0.25 * 535 ; place holder: maximum fraction of hand times maximum hand SA
+      set AW 0.25 * 535
       set contamMRSA3 0
       set contamCdiff3 0
       set pcolor white]
@@ -54,7 +54,7 @@ to setup
      let zone5-patches patches with [ pxcor < 0 and pycor < 84 and pycor > 0 ]
     ask zone5-patches [
       set zone "Out Patient Clinics"
-      set AW 0.25 * 535 ; place holder: maximum fraction of hand times maximum hand SA
+      set AW 0.25 * 535
       set contamMRSA3 0
       set contamCdiff3 0
       set pcolor white]
@@ -63,7 +63,7 @@ to setup
      let zone6-patches patches with [ pxcor < 0 and pycor < 0 and pycor > -84 ]
     ask zone6-patches [
       set zone "Radiology"
-      set AW 0.25 * 535 ; place holder: maximum fraction of hand times maximum hand SA
+      set AW 0.25 * 535
       set contamMRSA3 0
       set contamCdiff3 0
       set pcolor white]
@@ -72,7 +72,7 @@ to setup
    let zone7-patches patches with [ pxcor > 0 and pycor < 0 and pycor > -84 ]
     ask zone7-patches [
       set zone "Specialty Care Services"
-      set AW 0.25 * 535 ; place holder: maximum fraction of hand times maximum hand SA
+      set AW 0.25 * 535
       set contamMRSA3 0
       set contamCdiff3 0
       set pcolor white]
@@ -274,7 +274,7 @@ to transport
       if prob.5 > 101 / 125 and prob.5 <= 108 / 125
         [move-to one-of patches with [not any? patients-here and zone = "Radiology"]
         set transported? true]
-      if prob.5 > 108 / 125; double check this value
+      if prob.5 > 108 / 125
         [move-to one-of patches with [not any? patients-here and zone = "Specialty Care Services"]
         set transported? true]
     ]
